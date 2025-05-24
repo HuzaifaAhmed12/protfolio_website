@@ -10,6 +10,7 @@ export default {
       animation: {
         'slide-up': 'slideUp 0.5s ease-out',
         'fade-in': 'fadeIn 0.5s ease-out',
+        'pop-up': 'popUp 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
       },
       keyframes: {
         slideUp: {
@@ -19,6 +20,10 @@ export default {
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
+        },
+        popUp: {
+          '0%': { transform: 'scale(0.95)', opacity: 0 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
         },
       },
     },
