@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #f8fafc;
+  font-family: 'Inter', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  padding: 1px;
+}
+
+.gradient-border > div {
+  background: white;
+  height: 100%;
+}
