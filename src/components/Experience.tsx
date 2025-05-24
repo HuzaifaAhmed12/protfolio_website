@@ -52,7 +52,7 @@ const Experience: React.FC = () => {
     <section 
       id="experience" 
       ref={sectionRef}
-      className="py-20 bg-white opacity-0 transition-opacity duration-1000"
+      className="py-20 bg-gradient-to-b from-white to-gray-50 opacity-0 transition-opacity duration-1000 relative overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
@@ -60,7 +60,7 @@ const Experience: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Experience & Education
             </h2>
-            <div className="w-20 h-1 bg-teal-600 mx-auto mb-8 rounded-full"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-8 rounded-full"></div>
             <p className="text-gray-600 text-lg">
               My professional journey
             </p>
@@ -70,13 +70,13 @@ const Experience: React.FC = () => {
             {/* Work Experience */}
             <div>
               <div className="flex items-center mb-8">
-                <div className="w-10 h-10 rounded-full bg-teal-600 bg-opacity-10 flex items-center justify-center mr-3">
-                  <BriefcaseIcon size={20} className="text-teal-600" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-blue-500 flex items-center justify-center mr-3 hover-lift">
+                  <BriefcaseIcon size={24} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-800">Work Experience</h3>
+                <h3 className="text-2xl font-semibold text-gradient">Work Experience</h3>
               </div>
 
-              <div className="relative pl-8 border-l-2 border-gray-200">
+              <div className="relative pl-8 border-l-2 border-gradient">
                 {personalData.experiences.map((exp, index) => (
                   <div 
                     key={index}
@@ -84,20 +84,20 @@ const Experience: React.FC = () => {
                     className="mb-10 opacity-0 translate-y-8 transition-all duration-700"
                     style={{ transitionDelay: `${index * 150}ms` }}
                   >
-                    <div className="absolute left-[-8px] w-3 h-3 bg-teal-600 rounded-full border-4 border-white"></div>
-                    <div className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-100">
+                    <div className="absolute left-[-9px] w-4 h-4 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full border-4 border-white"></div>
+                    <div className="bg-white p-6 rounded-xl shadow-lg hover-lift">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3">
-                        <h4 className="text-lg font-semibold text-gray-800">{exp.title}</h4>
-                        <span className="text-sm text-teal-600 font-medium bg-teal-50 px-3 py-1 rounded-full mt-2 sm:mt-0">
+                        <h4 className="text-xl font-semibold text-gray-800 hover:text-gradient transition-all duration-300">{exp.title}</h4>
+                        <span className="text-sm text-white font-medium bg-gradient-to-r from-teal-500 to-blue-500 px-4 py-1 rounded-full mt-2 sm:mt-0">
                           {exp.period}
                         </span>
                       </div>
                       <p className="text-gray-600 mb-3">{exp.company} - {exp.location}</p>
                       <ul className="space-y-2">
                         {exp.description.map((desc, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="w-1.5 h-1.5 bg-teal-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            <span className="text-gray-600">{desc}</span>
+                          <li key={i} className="flex items-start group">
+                            <span className="w-2 h-2 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></span>
+                            <span className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">{desc}</span>
                           </li>
                         ))}
                       </ul>
@@ -110,13 +110,13 @@ const Experience: React.FC = () => {
             {/* Education */}
             <div>
               <div className="flex items-center mb-8">
-                <div className="w-10 h-10 rounded-full bg-teal-600 bg-opacity-10 flex items-center justify-center mr-3">
-                  <GraduationCap size={20} className="text-teal-600" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center mr-3 hover-lift">
+                  <GraduationCap size={24} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-800">Education</h3>
+                <h3 className="text-2xl font-semibold text-gradient">Education</h3>
               </div>
 
-              <div className="relative pl-8 border-l-2 border-gray-200">
+              <div className="relative pl-8 border-l-2 border-gradient">
                 {personalData.education.map((edu, index) => (
                   <div 
                     key={index}
@@ -124,17 +124,17 @@ const Experience: React.FC = () => {
                     className="mb-10 opacity-0 translate-y-8 transition-all duration-700"
                     style={{ transitionDelay: `${index * 150}ms` }}
                   >
-                    <div className="absolute left-[-8px] w-3 h-3 bg-teal-600 rounded-full border-4 border-white"></div>
-                    <div className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-100">
+                    <div className="absolute left-[-9px] w-4 h-4 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full border-4 border-white"></div>
+                    <div className="bg-white p-6 rounded-xl shadow-lg hover-lift">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3">
-                        <h4 className="text-lg font-semibold text-gray-800">{edu.degree}</h4>
-                        <span className="text-sm text-teal-600 font-medium bg-teal-50 px-3 py-1 rounded-full mt-2 sm:mt-0">
+                        <h4 className="text-xl font-semibold text-gray-800 hover:text-gradient transition-all duration-300">{edu.degree}</h4>
+                        <span className="text-sm text-white font-medium bg-gradient-to-r from-blue-500 to-teal-500 px-4 py-1 rounded-full mt-2 sm:mt-0">
                           {edu.period}
                         </span>
                       </div>
                       <p className="text-gray-600 mb-3">{edu.institution} - {edu.location}</p>
                       {edu.description && (
-                        <p className="text-gray-600">{edu.description}</p>
+                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300">{edu.description}</p>
                       )}
                     </div>
                   </div>
@@ -144,6 +144,10 @@ const Experience: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Decorative background elements */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-teal-500/5 to-blue-500/5 rounded-full animate-float"></div>
+      <div className="absolute bottom-20 right-10 w-60 h-60 bg-gradient-to-r from-blue-500/5 to-teal-500/5 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
     </section>
   );
 };
